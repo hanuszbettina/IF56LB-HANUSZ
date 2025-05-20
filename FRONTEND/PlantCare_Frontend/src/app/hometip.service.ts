@@ -13,7 +13,7 @@ export class HometipService {
       this.loadApi();
     }
     loadApi(): void{
-      this.http.get<Hometip[]>(this.apiBaseUrl + "getHometips").subscribe(x => {
+      this.http.get<Hometip[]>(this.apiBaseUrl + "getAllPlants").subscribe(x => {
         this.hometipsArray = x
       })
     }
