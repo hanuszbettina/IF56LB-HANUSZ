@@ -13,7 +13,7 @@ export class PlantService {
     this.loadApi();
    }
    loadApi(): void{
-    this.http.get<Plant[]>(this.apiBaseUrl + "getDevelopers").subscribe(x => {
+    this.http.get<Plant[]>(this.apiBaseUrl + "getPlants").subscribe(x => {
       this.plants = x
     })
    }
