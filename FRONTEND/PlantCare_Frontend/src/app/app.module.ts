@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { StatsComponent } from './stats/stats.component';
 import { CreatePlantComponent } from './create-plant/create-plant.component';
 import { CreateHometipComponent } from './create-hometip/create-hometip.component';
+import { EditPlantComponent } from './edit-plant/edit-plant.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CreateHometipComponent } from './create-hometip/create-hometip.componen
     NavComponent,
     StatsComponent,
     CreatePlantComponent,
-    CreateHometipComponent
+    CreateHometipComponent,
+    EditPlantComponent
   ],
   imports: [
     BrowserModule,
