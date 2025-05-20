@@ -10,6 +10,7 @@ import { StatsComponent } from './stats/stats.component';
 import { CreatePlantComponent } from './create-plant/create-plant.component';
 import { CreateHometipComponent } from './create-hometip/create-hometip.component';
 import { EditPlantComponent } from './edit-plant/edit-plant.component';
+import { EditHometipComponent } from './edit-hometip/edit-hometip.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditPlantComponent } from './edit-plant/edit-plant.component';
     StatsComponent,
     CreatePlantComponent,
     CreateHometipComponent,
-    EditPlantComponent
+    EditPlantComponent,
+    EditHometipComponent
   ],
   imports: [
     BrowserModule,

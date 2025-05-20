@@ -6,6 +6,7 @@ import { StatsComponent } from './stats/stats.component';
 import { CreatePlantComponent } from './create-plant/create-plant.component';
 import { CreateHometipComponent } from './create-hometip/create-hometip.component';
 import { EditPlantComponent } from './edit-plant/edit-plant.component';
+import { EditHometipComponent } from './edit-hometip/edit-hometip.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "plant-list", pathMatch: "full" },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "createplant", component: CreatePlantComponent },
   { path: "createhometip", component: CreateHometipComponent },
   { path: "editplant", component: EditPlantComponent },
+  { path: "edithometip", component: EditHometipComponent },
   { path: "statistics", component: StatsComponent },
   { path: "**", redirectTo: "plantlist", pathMatch: "full" },
 ];
