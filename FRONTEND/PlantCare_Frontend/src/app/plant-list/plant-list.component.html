@@ -1,2 +1,27 @@
 <h2>Plants</h2>
-<!--cardok-->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Water</th>
+            <th>Light</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let plant of plantService.plants" class="align-middle">
+            <td>{{ plant.id }}</td>
+            <td>{{ plant.name }}</td>
+            <td>{{ plant.water }}</td>
+            <td>{{ plant.light }}</td>
+            <td>
+                <button>
+                    Update
+                </button>
+                <button>
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
