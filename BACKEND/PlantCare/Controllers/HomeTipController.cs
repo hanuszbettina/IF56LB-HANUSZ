@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PlantCare.Data;
 using PlantCare.Entities.Dtos.HomeTip;
 using PlantCare.Logic.Logic;
+using PlantCare.Entities.Dtos.Plant;
 
 namespace PlantCare.Controllers
 {
@@ -21,6 +22,11 @@ namespace PlantCare.Controllers
             this.userManager = userManager;
         }
 
+        [HttpGet]
+        public IEnumerable<HomeTipGetDto> GetAllHomeTips()
+        {
+            return logic.GetAllHomeTips();
+        }
         [HttpPost]
         public async Task AddHomeTip(HomeTipCreateDto dto)
         {

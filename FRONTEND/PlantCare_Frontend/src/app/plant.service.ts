@@ -7,13 +7,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class PlantService {
   plants: Plant[]=[]
-  apiBaseUrl: string="https://localhost:7285/api/index.html"
+  apiBaseUrl: string="https://localhost:7285/api/"
 
   constructor(private http:HttpClient) {
     this.loadApi();
    }
    loadApi(): void{
-    this.http.get<Plant[]>(this.apiBaseUrl + "getPlants").subscribe(x => {
+    this.http.get<Plant[]>(this.apiBaseUrl + "plant").subscribe(x => {
       this.plants = x
     })
    }

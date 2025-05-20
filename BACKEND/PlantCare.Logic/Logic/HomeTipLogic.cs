@@ -1,5 +1,6 @@
 ﻿using PlantCare.Data;
 using PlantCare.Entities.Dtos.HomeTip;
+using PlantCare.Entities.Dtos.Plant;
 using PlantCare.Entities.Entity_Models;
 using PlantCare.Logic.Helpers;
 using System;
@@ -26,6 +27,12 @@ namespace PlantCare.Logic.Logic
             var model = dtoProvider.Mapper.Map<HomeTip>(dto);
             model.UserId = userId;
             repo.Create(model);
+        }
+        public IEnumerable<HomeTipGetDto> GetAllHomeTips()
+        {
+            return repo.GetAll().Select(x =>
+                dtoProvider.Mapper.Map<HomeTipGetDto>(x)
+            );
         }
     }
 }

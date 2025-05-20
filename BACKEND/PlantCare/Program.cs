@@ -67,7 +67,15 @@ namespace PlantCare
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
             builder.Services.AddControllers(opt =>
             {
                 opt.Filters.Add<ExceptionFilter>();
@@ -111,6 +119,7 @@ namespace PlantCare
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseCors("AllowAngular");
 
             app.UseHttpsRedirection();
 

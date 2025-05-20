@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { PlantService } from '../plant.service';
 
 @Component({
   selector: 'app-plant-list',
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './plant-list.component.scss'
 })
 export class PlantListComponent {
-
+constructor(private router: Router, public plantService:PlantService){}
 }

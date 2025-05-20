@@ -32,7 +32,7 @@ namespace PlantCare.Controllers
 
         [HttpDelete("{id}")]
        // [Authorize(Roles = "Admin")]
-        public void DeleteMovie(string id)
+        public void DeletePlant(string id)
         {
             logic.DeletePlant(id);
         }

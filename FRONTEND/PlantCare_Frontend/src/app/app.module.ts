@@ -11,6 +11,7 @@ import { CreatePlantComponent } from './create-plant/create-plant.component';
 import { CreateHometipComponent } from './create-hometip/create-hometip.component';
 import { EditPlantComponent } from './edit-plant/edit-plant.component';
 import { EditHometipComponent } from './edit-hometip/edit-hometip.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { EditHometipComponent } from './edit-hometip/edit-hometip.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

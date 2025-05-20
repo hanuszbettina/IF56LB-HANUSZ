@@ -40,6 +40,7 @@ namespace PlantCare.Logic.Helpers
                 cfg.CreateMap<PlantCreateUpdateDto, Plant>();
                 cfg.CreateMap<HomeTipCreateDto, HomeTip>();
                 cfg.CreateMap<HomeTip, HomeTipViewDto>();
+                cfg.CreateMap<HomeTip, HomeTipGetDto>();
                 //.AfterMap((src, dest) =>
                 //{
                 //    var user = userManager.Users.First(u => u.Id == src.UserId);
