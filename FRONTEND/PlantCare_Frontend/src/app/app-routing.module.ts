@@ -4,12 +4,14 @@ import { PlantListComponent } from './plant-list/plant-list.component';
 import { HometipListComponent } from './hometip-list/hometip-list.component';
 import { StatsComponent } from './stats/stats.component';
 import { CreatePlantComponent } from './create-plant/create-plant.component';
+import { CreateHometipComponent } from './create-hometip/create-hometip.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "plant-list", pathMatch: "full" },
   { path: "plant-list", component: PlantListComponent },
   { path: "hometip-list", component: HometipListComponent },
   { path: "createplant", component: CreatePlantComponent },
+  { path: "createhometip", component: CreateHometipComponent },
   { path: "statistics", component: StatsComponent },
   { path: "**", redirectTo: "plantlist", pathMatch: "full" },
 ];

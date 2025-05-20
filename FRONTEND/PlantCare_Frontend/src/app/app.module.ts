@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { StatsComponent } from './stats/stats.component';
 import { CreatePlantComponent } from './create-plant/create-plant.component';
+import { CreateHometipComponent } from './create-hometip/create-hometip.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CreatePlantComponent } from './create-plant/create-plant.component';
     HometipListComponent,
     NavComponent,
     StatsComponent,
-    CreatePlantComponent
+    CreatePlantComponent,
+    CreateHometipComponent
   ],
   imports: [
     BrowserModule,
