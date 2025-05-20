@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantListComponent } from './plant-list/plant-list.component';
 import { HometipListComponent } from './hometip-list/hometip-list.component';
+import { NavComponent } from './nav/nav.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlantListComponent,
-    HometipListComponent
+    HometipListComponent,
+    NavComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
