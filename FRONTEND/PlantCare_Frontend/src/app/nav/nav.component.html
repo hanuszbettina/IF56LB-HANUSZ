@@ -1,9 +1,47 @@
-<nav>
-    <a routerLink="/plant-list">Plants</a>
-    <a routerLink="/hometip-list">Hometips</a>
-    <a routerLink="/createplant">Create Plant</a>
-    <a routerLink="/createhometip">Create Hometip</a>
-    <a routerLink="/editplant">Edit Plant</a>
-    <a routerLink="/edithometip">Edit Hometip</a>
-    <a routerLink="/statistics">Statistics</a>
+<nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/plant-list">
+                        <i class="bi bi-flower1"></i>
+                        Plants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/hometip-list">
+                        <i class="bi bi-body-text"></i>
+                        Hometips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/createplant">
+                        <i class="bi bi-plus-circle"></i>
+                        Create Plant</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link active" routerLink="/createhometip">
+                        <i class="bi bi-plus-circle"></i>
+                        Create Hometip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/editplant">
+                        <i class="bi bi-vector-pen"></i>
+                        Edit Plant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/edithometip">
+                        <i class="bi bi-vector-pen"></i>
+                        Edit Hometip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/statistics">
+                        <i class="bi bi-bar-chart-line-fill"></i>
+                        Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>

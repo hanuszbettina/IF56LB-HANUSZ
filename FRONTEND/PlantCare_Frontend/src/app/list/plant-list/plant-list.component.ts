@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PlantService } from '../plant.service';
-import { Plant } from '../plant';
+import { PlantService } from '../../services/plant.service';
+import { Plant } from '../../class/plant';
 
 @Component({
   selector: 'app-plant-list',

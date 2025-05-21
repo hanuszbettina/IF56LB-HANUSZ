@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { StatsService } from '../stats.service';
-import { PlantService } from '../plant.service';
-import { Plant } from '../plant';
+import { StatsService } from '../services/stats.service';
+import { PlantService } from '../services/plant.service';
+import { Plant } from '../class/plant';
 import { ChartConfiguration } from 'chart.js';
 
 @Component({

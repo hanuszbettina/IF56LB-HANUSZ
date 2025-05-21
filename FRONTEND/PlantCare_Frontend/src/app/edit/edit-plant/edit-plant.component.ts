@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Plant } from '../plant';
+import { Plant } from '../../class/plant';
 import {Router } from '@angular/router';
-import { PlantService } from '../plant.service';
+import { PlantService } from '../../services/plant.service';
 
 @Component({
   selector: 'app-edit-plant',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HometipService } from '../hometip.service';
-import { Hometip } from '../hometip';
+import { HometipService } from '../../services/hometip.service';
+import { Hometip } from '../../class/hometip';
 
 @Component({
   selector: 'app-hometip-list',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Plant } from '../plant';
-import { PlantService } from '../plant.service';
+import { Plant } from '../../class/plant';
+import { PlantService } from '../../services/plant.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-plant',
