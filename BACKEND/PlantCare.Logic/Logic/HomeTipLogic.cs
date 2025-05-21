@@ -38,5 +38,11 @@ namespace PlantCare.Logic.Logic
         {
             repo.DeleteById(id);
         }
+        public void UpdateHomeTip(string id, HomeTipCreateDto dto)
+        {
+            var old = repo.FindById(id);
+            dtoProvider.Mapper.Map(dto, old);
+            repo.Update(old);
+        }
     }
 }

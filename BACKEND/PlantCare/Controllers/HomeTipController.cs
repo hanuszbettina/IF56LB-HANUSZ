@@ -34,10 +34,12 @@ namespace PlantCare.Controllers
             var userId = user?.Id ?? "dummy-user-id"; // vagy egy konstans teszt userId
             logic.AddHomeTip(dto, userId);
         }
+        [HttpDelete]
         public void DeleteHomeTip(string id)
         {
             logic.DeleteHomeTip(id);
         }
+        [HttpPost]
         public void UpdateHomeTip(string id, [FromBody] HomeTipCreateDto dto)
         {
             logic.UpdateHomeTip(id, dto);

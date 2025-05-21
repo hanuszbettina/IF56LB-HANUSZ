@@ -1,4 +1,4 @@
 <h2>Edit Hometip</h2>
 <input type="text" placeholder="Plant Name" [(ngModel)]="hometip.plantName">
 <textarea placeholder="Your hometip" [(ngModel)]="hometip.text"></textarea>
-<button>Save</button>
+<button (click)="save()">Save</button>
