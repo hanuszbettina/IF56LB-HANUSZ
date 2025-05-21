@@ -1,5 +1,5 @@
 <h2>Create Plant</h2>
-<input type="text" placeholder="Name" [(ngModel)]="plant.name">
-<input type="text" placeholder="Water (daily/weekly/monthly)" [(ngModel)]="plant.water">
-<input type="text" placeholder="Light (low/medium/high)" [(ngModel)]="plant.light">
-<button (click)="save()">Save</button>
+<input type="text" class="form-control mb-1" placeholder="Name" [(ngModel)]="plant.name">
+<input type="text" class="form-control mb-1" placeholder="Water (daily/weekly/monthly)" [(ngModel)]="plant.water">
+<input type="text" class="form-control mb-1" placeholder="Light (low/medium/high)" [(ngModel)]="plant.light">
+<button class="btn btn-outline-success" (click)="save()">Save</button>
