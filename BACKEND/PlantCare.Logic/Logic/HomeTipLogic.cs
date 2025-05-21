@@ -34,5 +34,9 @@ namespace PlantCare.Logic.Logic
                 dtoProvider.Mapper.Map<HomeTipGetDto>(x)
             );
         }
+        public void DeleteHomeTip(string id)
+        {
+            repo.DeleteById(id);
+        }
     }
 }
