@@ -12,6 +12,7 @@ import { CreateHometipComponent } from './create/create-hometip/create-hometip.c
 import { EditPlantComponent } from './edit/edit-plant/edit-plant.component';
 import { EditHometipComponent } from './edit/edit-hometip/edit-hometip.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreatePlantComponent,
     CreateHometipComponent,
     EditPlantComponent,
-    EditHometipComponent
+    EditHometipComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
