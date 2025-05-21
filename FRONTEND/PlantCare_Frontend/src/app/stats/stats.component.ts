@@ -26,4 +26,8 @@ export class StatsComponent {
   get averageHomeTipCount():number{
     return this.statsService.averageHomeTipCount(this.plants)
   }
+
+  get mostTippedPlant(): Plant | null{
+    return this.statsService.mostTippedPlant(this.plants)
+  }
 } 

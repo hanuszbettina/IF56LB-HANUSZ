@@ -22,4 +22,14 @@ export class StatsService {
     }
   }
   
+  mostTippedPlant(plants: Plant[]): Plant | null {
+    if (!plants.length) 
+    {
+      return null;
+    }
+    else
+    {
+      return plants.reduce((a, b) => (a.homeTips?.length ?? 0) > (b.homeTips?.length ?? 0) ? a : b);
+    }
+ }
 }

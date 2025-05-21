@@ -4,6 +4,10 @@
     <ul *ngIf="plants.length">
         <li>Összes növény száma: <strong>{{ totalPlantCount }}</strong></li>
         <li>Átlagos hometippek száma növényenként:<strong>{{ averageHomeTipCount | number:'1.1-2' }}</strong></li>
+        <li *ngIf="mostTippedPlant;else noMost">Legtöbb hometippel rendelkező növény: <strong>{{ mostTippedPlant.name }}</strong></li>
+        <ng-template #noMost>
+            <li>Legkevesebb hometippel rendelkező növény: <strong>Nincs</strong></li>
+        </ng-template>
     </ul>
 </div>
 <ng-template #noPlants>
