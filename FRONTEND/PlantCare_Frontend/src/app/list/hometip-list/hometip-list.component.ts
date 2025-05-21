@@ -15,6 +15,6 @@ export class HometipListComponent {
             this.hometipService.remove(hometip)
           }
       edit(hometip: Hometip): void {
-            this.router.navigate(["/edithometip/" + hometip.plantId])
+            this.router.navigate(["/edithometip/"+hometip.plantName])
           }
 }

@@ -15,7 +15,9 @@ const routes: Routes = [
   { path: "createplant", component: CreatePlantComponent },
   { path: "createhometip", component: CreateHometipComponent },
   { path: "editplant", component: EditPlantComponent },
+  { path: "editplant/:id", component: EditPlantComponent },
   { path: "edithometip", component: EditHometipComponent },
+  { path: "edithometip/:id", component: EditPlantComponent },
   { path: "statistics", component: StatsComponent },
   { path: "**", redirectTo: "plantlist", pathMatch: "full" },
 ];

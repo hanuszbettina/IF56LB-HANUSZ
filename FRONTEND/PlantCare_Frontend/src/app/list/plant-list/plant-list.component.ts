@@ -15,6 +15,6 @@ constructor(private router: Router, public plantService:PlantService){}
       this.plantService.remove(plant)
     }
   edit(plant: Plant): void {
-      this.router.navigate(["/editplant/" + plant.id])
+      this.router.navigate(["/editplant/"+plant.id])
     }
 }

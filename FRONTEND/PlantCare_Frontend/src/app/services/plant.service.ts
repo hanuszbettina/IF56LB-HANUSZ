@@ -65,4 +65,15 @@ export class PlantService {
       }
     })
   }
+
+  getAllPlants(callback: (data: Plant[]) => void): void {
+  this.http.get<Plant[]>(this.apiBaseUrl + 'plant').subscribe(data => {
+    const plants = data.map(item => {
+      const plant = new Plant();
+      Object.assign(plant, item);
+      return plant;
+    });
+    callback(plants);
+  });
+  }
 }

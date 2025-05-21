@@ -12,8 +12,9 @@ import { HometipService } from '../../services/hometip.service';
 export class EditHometipComponent {
   hometip: Hometip=new Hometip()
   constructor(private router: Router, private hometipService: HometipService) { }
+  
   save(): void {
     this.hometipService.update(this.hometip)
-    this.router.navigate(["/list"])
+    this.router.navigate(["/hometip-list"])
   }
 }

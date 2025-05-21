@@ -39,10 +39,11 @@ namespace PlantCare.Controllers
         {
             logic.DeleteHomeTip(id);
         }
-        [HttpPost]
-        public void UpdateHomeTip(string id, [FromBody] HomeTipCreateDto dto)
-        {
-            logic.UpdateHomeTip(id, dto);
-        }
+        //[HttpPost]
+        //public void UpdateHomeTip(string id, [FromBody] HomeTipCreateDto dto)
+        //{
+        //    logic.UpdateHomeTip(id, dto);
+        //}
+
     }
 }
