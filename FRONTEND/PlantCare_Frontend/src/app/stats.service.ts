@@ -10,6 +10,16 @@ export class StatsService {
     return plants.length
   }
 
-  
+  averageHomeTipCount(plants: Plant[]): number {
+  if (!plants.length) 
+    {
+      return 0;
+    }
+    else
+    {
+      const totalTips = plants.map(p => p.homeTips?.length ?? 0).reduce((a, b) => a + b, 0);
+      return (totalTips / plants.length);
+    }
+  }
   
 }

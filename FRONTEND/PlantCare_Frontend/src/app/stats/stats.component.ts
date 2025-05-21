@@ -23,4 +23,7 @@ export class StatsComponent {
     return this.statsService.totalPlantCount(this.plants)
   }
 
+  get averageHomeTipCount():number{
+    return this.statsService.averageHomeTipCount(this.plants)
+  }
 } 

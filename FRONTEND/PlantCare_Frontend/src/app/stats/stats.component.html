@@ -3,7 +3,7 @@
     <hr>
     <ul *ngIf="plants.length">
         <li>Összes növény száma: <strong>{{ totalPlantCount }}</strong></li>
-        
+        <li>Átlagos hometippek száma növényenként:<strong>{{ averageHomeTipCount | number:'1.1-2' }}</strong></li>
     </ul>
 </div>
 <ng-template #noPlants>
