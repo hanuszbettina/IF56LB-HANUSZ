@@ -1,8 +1,12 @@
 <h2>Hometips</h2>
+<div class="container mt-3">
+<div class="row">
 <div *ngFor="let hometip of hometipService.hometipsArray" class="card" style="width: 18rem;">
   <img src="https://www.plantsforallseasons.co.uk/cdn/shop/files/houseplant-collection-5-plants-black-friday-exclusive-house-plant-921052.jpg?v=1732839177" class="card-img-top" alt="plant">
   <div class="card-body">
     <h5 class="card-title">{{hometip.plantName}}</h5>
     <p class="card-text">{{hometip.text}}</p>
+  </div>
+  </div>
   </div>
 </div>
