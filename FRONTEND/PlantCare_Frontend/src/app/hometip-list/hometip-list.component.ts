@@ -11,7 +11,10 @@ import { Hometip } from '../hometip';
 })
 export class HometipListComponent {
   constructor(private router: Router, public hometipService: HometipService) { }
-  remove(hometip: Hometip): void {
-        this.hometipService.remove(hometip)
-      }
+      remove(hometip: Hometip): void {
+            this.hometipService.remove(hometip)
+          }
+      edit(hometip: Hometip): void {
+            this.router.navigate(["/edithometip/" + hometip.plantId])
+          }
 }
