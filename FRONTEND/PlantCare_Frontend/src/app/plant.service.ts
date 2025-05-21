@@ -17,4 +17,17 @@ export class PlantService {
       this.plants = x
     })
    }
+
+   create(plant: Plant): void {
+       this.http.post(this.apiBaseUrl + "AddPlant", plant).subscribe({
+         next: (response) => {
+           console.log("::SUCCESS::")
+           console.log("Create request result:", response)
+           this.plants.push(plant)
+         },
+         error: (error) => {
+           console.log("::ERROR::")
+           console.log("Create request result:", error)
+         }
+       })
 }

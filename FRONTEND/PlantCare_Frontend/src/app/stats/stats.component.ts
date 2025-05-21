@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { StatsService } from '../stats.service';
 import { PlantService } from '../plant.service';
 import { Plant } from '../plant';
+import { ChartConfiguration } from 'chart.js';
 
 @Component({
   selector: 'app-stats',
@@ -34,4 +35,10 @@ export class StatsComponent {
   get leastTippedPlant(): Plant | null{
     return this.statsService.leastTippedPlant(this.plants)
   }
+
+  
+  //diagramng serve
+ 
+
+
 } 
