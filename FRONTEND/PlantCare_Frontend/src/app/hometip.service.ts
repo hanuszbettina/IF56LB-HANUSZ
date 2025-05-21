@@ -30,4 +30,19 @@ export class HometipService {
       }
     })
   }
+
+  update(hometip: Hometip): void {
+    this.http.put(this.apiBaseUrl + "updateDeveloper", hometip).subscribe({
+      next: (response) => {
+        console.log("::SUCCESS::")
+        console.log("Update request result:", response)
+        let index = this.hometipsArray.findIndex(x => x.plantId === hometip.plantId)
+        this.hometipsArray[index] = hometip
+      },
+      error: (error) => {
+        console.log("::ERROR::")
+        console.log("Update request result:", error)
+      }
+    })
+  }
 }
