@@ -8,6 +8,10 @@
         <ng-template #noMost>
             <li>Legkevesebb hometippel rendelkező növény: <strong>Nincs</strong></li>
         </ng-template>
+        <li *ngIf="leastTippedPlant;else noLeast" >Legkevesebb hometippel rendelkező növény: <strong>{{ leastTippedPlant.name }}</strong></li>
+        <ng-template #noLeast>
+            <li>Legkevesebb hometippel rendelkező növény: <strong>Nincs</strong></li>
+        </ng-template>
     </ul>
 </div>
 <ng-template #noPlants>

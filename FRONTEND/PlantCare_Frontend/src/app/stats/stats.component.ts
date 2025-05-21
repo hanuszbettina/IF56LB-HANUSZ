@@ -30,4 +30,8 @@ export class StatsComponent {
   get mostTippedPlant(): Plant | null{
     return this.statsService.mostTippedPlant(this.plants)
   }
+
+  get leastTippedPlant(): Plant | null{
+    return this.statsService.leastTippedPlant(this.plants)
+  }
 } 
