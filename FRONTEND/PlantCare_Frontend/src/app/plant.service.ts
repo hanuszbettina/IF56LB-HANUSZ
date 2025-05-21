@@ -30,4 +30,20 @@ export class PlantService {
            console.log("Create request result:", error)
          }
        })
+      }
+
+      update(plant: Plant): void {
+    this.http.put(this.apiBaseUrl + "UpdatePlant", plant).subscribe({
+      next: (response) => {
+        console.log("::SUCCESS::")
+        console.log("Update request result:", response)
+        let index = this.plants.findIndex(x => x.id === plant.id)
+        this.plants[index] = plant
+      },
+      error: (error) => {
+        console.log("::ERROR::")
+        console.log("Update request result:", error)
+      }
+    })
+  }
 }
