@@ -13,7 +13,7 @@ export class EditPlantComponent {
   plant: Plant=new Plant()
   constructor(private router: Router, private plantService: PlantService) { }
   save(): void {
-    this.plantService.update(this.plant)
+    this.plantService.AddPlant(this.plant)
     this.router.navigate(["/plant-list"])
   }
 }

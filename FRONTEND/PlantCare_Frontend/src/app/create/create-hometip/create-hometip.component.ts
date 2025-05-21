@@ -13,7 +13,7 @@ export class CreateHometipComponent {
   hometip:Hometip=new Hometip()
   constructor(private router: Router, private hometipService: HometipService) { }
   create(): void {
-    this.hometipService.create(this.hometip)
+    this.hometipService.AddHomeTip(this.hometip)
     this.router.navigate(["/hometip-list"])
   }
 }

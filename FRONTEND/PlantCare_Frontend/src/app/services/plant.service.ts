@@ -18,8 +18,8 @@ export class PlantService {
     })
    }
 
-   create(plant: Plant): void {
-       this.http.post(this.apiBaseUrl + "AddPlant", plant).subscribe({
+   AddPlant(plant: Plant): void {
+       this.http.post(this.apiBaseUrl + "plant", plant).subscribe({
          next: (response) => {
            console.log("::SUCCESS::")
            console.log("Create request result:", response)
@@ -32,8 +32,8 @@ export class PlantService {
        })
       }
 
-      update(plant: Plant): void {
-    this.http.put(this.apiBaseUrl + "UpdatePlant", plant).subscribe({
+      UpdatePlant(plant: Plant): void {
+    this.http.put(this.apiBaseUrl + "plant", plant).subscribe({
       next: (response) => {
         console.log("::SUCCESS::")
         console.log("Update request result:", response)
@@ -47,8 +47,8 @@ export class PlantService {
     })
   }
 
-  remove(plant: Plant): void {
-    this.http.delete(this.apiBaseUrl + "DeletePlant", {
+  DeletePlant(plant: Plant): void {
+    this.http.delete(this.apiBaseUrl + "plant", {
       headers: new HttpHeaders({ "Content-Type": "application/json" }),
       body: {
         id: plant.id

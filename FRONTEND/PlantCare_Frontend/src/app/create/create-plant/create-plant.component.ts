@@ -12,7 +12,7 @@ export class CreatePlantComponent {
   plant: Plant=new Plant()
   constructor(private router: Router, private plantService: PlantService) { }
   save(): void {
-    this.plantService.create(this.plant)
+    this.plantService.AddPlant(this.plant)
     this.router.navigate(["/plant-list"])
   }
 }

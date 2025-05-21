@@ -14,7 +14,7 @@ export class EditHometipComponent {
   constructor(private router: Router, private hometipService: HometipService) { }
   
   save(): void {
-    this.hometipService.update(this.hometip)
+    this.hometipService.AddHomeTip(this.hometip)
     this.router.navigate(["/hometip-list"])
   }
 }

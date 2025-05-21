@@ -17,8 +17,8 @@ export class HometipService {
         this.hometipsArray = x
       })
     }
-    create(hometip: Hometip): void {
-    this.http.post(this.apiBaseUrl + "AddHomeTip", hometip).subscribe({
+    AddHomeTip(hometip: Hometip): void {
+    this.http.post(this.apiBaseUrl + "hometip", hometip).subscribe({
       next: (response) => {
         console.log("::SUCCESS::")
         console.log("Create request result:", response)
@@ -31,8 +31,8 @@ export class HometipService {
     })
   }
 
-  update(hometip: Hometip): void {
-    this.http.put(this.apiBaseUrl + "UpdateHomeTip", hometip).subscribe({
+  UpdateHomeTip(hometip: Hometip): void {
+    this.http.put(this.apiBaseUrl + "hometip", hometip).subscribe({
       next: (response) => {
         console.log("::SUCCESS::")
         console.log("Update request result:", response)
@@ -46,8 +46,8 @@ export class HometipService {
     })
   }
 
-   remove(hometip: Hometip): void {
-    this.http.delete(this.apiBaseUrl + "DeleteHomeTip", {
+   DeleteHomeTip(hometip: Hometip): void {
+    this.http.delete(this.apiBaseUrl + "hometip", {
       headers: new HttpHeaders({ "Content-Type": "application/json" }),
       body: {
         id: hometip.plantId
