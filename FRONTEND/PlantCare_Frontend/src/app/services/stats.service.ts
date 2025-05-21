@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Plant } from '../class/plant';
+import { ChartConfiguration } from 'chart.js';
 
 @Injectable({
   providedIn: 'root'
@@ -43,4 +44,26 @@ export class StatsService {
       return plants.reduce((a, b) => (a.homeTips?.length ?? 0) < (b.homeTips?.length ?? 0) ? a : b);
     }
  }
+
+//diagram 
+getBarChartConfig(plants: Plant[]): ChartConfiguration<'bar'> {
+    return {
+      type: 'bar',
+      data: {
+        labels: plants.map(p => p.name),
+        datasets: [{
+          label: 'Plants Hometips',
+          data: plants.map(p => p.homeTips ? p.homeTips.length : 0),
+          backgroundColor: 'rgba(30, 128, 5, 0.77)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true, max: 10 }
+        }
+      }
+    };
+  }
+
 }

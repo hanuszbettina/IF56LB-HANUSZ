@@ -22,5 +22,21 @@
 </div>
 </ng-template>
 
-
-
+<div class="row mb-5 justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Plant hometips</h4>
+        </div>
+        <div class="card-body" *ngIf="barChartConfig">
+          <canvas baseChart
+                  [data]="barChartConfig.data"
+                  [options]="barChartConfig.options"
+                  [type]="barChartConfig.type"
+                  class="d-block mx-auto"
+                  style="max-height: 300px;">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>

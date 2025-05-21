@@ -11,10 +11,11 @@ import { ChartConfiguration } from 'chart.js';
   styleUrl: './stats.component.scss'
 })
 export class StatsComponent {
+  
   constructor(
     public statsService: StatsService,
     public plantService: PlantService
-  ){}
+  ){this.loadData();}
 
   get plants(): Plant[]{
     return this.plantService.plants
@@ -37,8 +38,14 @@ export class StatsComponent {
   }
 
   
-  //diagramng serve
+  //diagram
+ barChartConfig?: ChartConfiguration<'bar'>;
  
+   loadData() {
+     this.plantService.getAllPlants((plant: Plant[]) => {
+       this.barChartConfig = this.statsService.getBarChartConfig(plant);
+     });
+   }
 
 
 } 
