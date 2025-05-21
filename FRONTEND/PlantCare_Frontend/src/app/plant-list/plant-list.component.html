@@ -15,7 +15,7 @@
             <td>{{ plant.water }}</td>
             <td>{{ plant.light }}</td>
             <td>
-                <button>
+                <button (click)="edit(plant)">
                     Update
                 </button>
                 <button (click)="remove(plant)">

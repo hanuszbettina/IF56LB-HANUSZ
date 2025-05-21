@@ -11,8 +11,10 @@ import { Plant } from '../plant';
 })
 export class PlantListComponent {
 constructor(private router: Router, public plantService:PlantService){}
-remove(plant: Plant): void {
-    this.plantService.remove(plant)
-  }
-
+  remove(plant: Plant): void {
+      this.plantService.remove(plant)
+    }
+  edit(plant: Plant): void {
+      this.router.navigate(["/editplant/" + plant.id])
+    }
 }

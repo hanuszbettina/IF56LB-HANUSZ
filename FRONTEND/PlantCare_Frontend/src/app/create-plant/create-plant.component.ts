@@ -13,6 +13,6 @@ export class CreatePlantComponent {
   constructor(private router: Router, private plantService: PlantService) { }
   save(): void {
     this.plantService.create(this.plant)
-    this.router.navigate(["/hometip"])
+    this.router.navigate(["/plant-list"])
   }
 }
