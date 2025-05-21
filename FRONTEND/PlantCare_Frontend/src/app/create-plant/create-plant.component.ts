@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class CreatePlantComponent {
   plant: Plant=new Plant()
   constructor(private router: Router, private plantService: PlantService) { }
-  create(): void {
+  save(): void {
     this.plantService.create(this.plant)
-    this.router.navigate(["list"])
+    this.router.navigate(["/hometip"])
   }
 }

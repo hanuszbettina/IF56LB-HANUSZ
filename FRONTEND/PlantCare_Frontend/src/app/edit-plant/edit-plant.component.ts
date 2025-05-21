@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Plant } from '../plant';
+import {Router } from '@angular/router';
+import { PlantService } from '../plant.service';
 
 @Component({
   selector: 'app-edit-plant',
@@ -9,4 +11,9 @@ import { Plant } from '../plant';
 })
 export class EditPlantComponent {
   plant: Plant=new Plant()
+  constructor(private router: Router, private plantService: PlantService) { }
+  save(): void {
+    this.plantService.update(this.plant)
+    this.router.navigate(["/plant"])
+  }
 }
