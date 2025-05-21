@@ -46,4 +46,23 @@ export class PlantService {
       }
     })
   }
+
+  remove(plant: Plant): void {
+    this.http.delete(this.apiBaseUrl + "DeletePlant", {
+      headers: new HttpHeaders({ "Content-Type": "application/json" }),
+      body: {
+        id: plant.id
+      }
+    }).subscribe({
+      next: (response) => {
+        console.log("::SUCCESS::")
+        console.log("Delete request result:", response)
+        this.plants = this.plants.filter(x => x.id !== plant.id)
+      },
+      error: (error) => {
+        console.log("::ERROR::")
+        console.log("Delete request result:", error)
+      }
+    })
+  }
 }
